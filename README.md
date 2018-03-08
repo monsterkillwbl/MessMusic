@@ -3,7 +3,7 @@ API
 目前已有API接口：网易云音乐、酷狗音乐、QQ音乐、ONE(一个)每日一篇文字
 >最新增加数据库缓存请求次数、内容、结果(务必安装数据库后使用)
 ### 1. 请求地址
-1. [音乐歌单](https://api.hibai.cn)
+1. [音乐网站](https://www.7cwa.com)
 2. 入口：[https://api.hibai.cn/api/index/index](https://api.hibai.cn/api/index/index)
 3. 测试：[demo](https://api.hibai.cn/api/demo/index)
 
