@@ -100,4 +100,35 @@ class KgMusic extends Model {
         }
         return ['ResultCode'=>1,'ErrCode'=>'OK','Body'=>$body];
     }
+    //酷狗音乐热门排行榜
+    public function getKgHotSong(){
+        $post = input('post.');
+        $music =  model('music/KgMusic','model');
+        for ($i=0; $i < 3; $i++) { 
+            $url = 'http://m.kugou.com/rank/info/?rankid=8888&page='.($i+1).'&json=true';
+            $url = 'http://m.kugou.com/rank/info/?rankid=8888&page='.($i+1).'&json=true';
+            $musicInfo = $music->curl_get($url);
+            $musicInfo = json_decode($musicInfo,1);
+            //判断是否存在 否则返回null
+            if(!isset($musicInfo['songs']['list'])||sizeof($musicInfo['songs']['list'])<=0){
+                return ['ResultCode'=>1,'ErrCode'=>'2003','ErrMsg'=>'KuGou SongList not exists'];
+            }
+            foreach ($musicInfo['songs']['list'] as $key => $value) {
+                $mid = $value['hash'];
+                // 正则匹配分离filename
+                $result = preg_split('[ - ]',$value['filename']);
+                // 歌名 歌手
+                $body[$key+$i*10]['title'] = $result[1];
+                $body[$key+$i*10]['author'] = $result[0];
+                $body[$key+$i*10]['time'] = $value['duration'];
+                //歌曲URL
+                $body[$key+$i*10]['url'] = $music->getKgSongResURL($value['hash']);
+                //歌曲PIC
+                $body[$key+$i*10]['pic'] = $music->getKgSongPic($value['hash']);
+                //歌曲LRC
+                $body[$key+$i*10]['lrc'] = $music->getKgSongLrc($value['hash']);
+            }
+        }
+        return ['ResultCode'=>1,'ErrCode'=>'OK','Body'=>$body];
+    }
 }

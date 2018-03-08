@@ -205,5 +205,43 @@ class Music extends Model {
         }
         return ['ResultCode'=>1,'ErrCode'=>'OK','Body'=>$body];
     }
+    // 获取网易云热门歌单
+    public function getHotSongList(){
+        $post = input('post.');
+        //实例化模型
+        $music = model('music/Music','model');
+        $url = "https://music.163.com/api/playlist/detail?id=3778678";
+        $musicInfo = $music->curl_get($url);
+        // 格式化json
+        $musicInfo = str_replace('\\', '', $musicInfo);
+        $musicInfo = json_decode($musicInfo,1);
+        // 判断是否存在
+        if (!isset($musicInfo['result']['tracks'])) {
+            return ['ResultCode'=>1,'ErrCode'=>'1001','ErrMsg'=>'HotSongList not exists'];
+        }
+        // 循环获取歌单信息
+        foreach ($musicInfo['result']['tracks'] as $key => $value) {
+            //音乐ID
+            $id =  $musicInfo['result']['tracks'][$key]['id'];
+            //音乐名称
+            $body[$key]['title'] = $musicInfo['result']['tracks'][$key]['name'];
+            // 歌手信息
+            $body[$key]['author'] = $musicInfo['result']['tracks'][$key]['artists'][0]['name'];
+
+            // 音乐图片
+            $listPic = $music->getNECSongPics($id);
+            $body[$key]['pic'] = $listPic;
+            // 音乐链接
+            $listResURL = $music->getNECSongResURL($id);
+            $body[$key]['url'] = $listResURL;
+            // 音乐歌词
+            $listLyric = $music->getNECSongLyric($id);
+            $body[$key]['lrc'] = $listLyric;
+            //时间
+            $time = $value['duration'];
+            $body[$key]['time'] = ceil($time/1000);
+        }
+        return ['ResultCode'=>1,'ErrCode'=>'OK','Body'=>$body];
+    }
 
 }

@@ -127,7 +127,7 @@ class Qmusic extends Model {
     }
     //QQ热歌榜
     public function getQHotSongList(){
-        $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?tpl=3&page=detail&topid=26&type=top&song_begin=0&song_num=100&g_tk=5381&jsonpCallback=MusicJsonCallbacktoplist&loginUin=0&hostUin='.rand(100000,99999999).'&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?tpl=3&page=detail&topid=26&type=top&song_begin=0&song_num=200&g_tk=5381&jsonpCallback=MusicJsonCallbacktoplist&loginUin=0&hostUin='.rand(100000,99999999).'&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $music =  model('music/Qmusic','model');
         $musicInfo = $music->curl_get($url);
         //去除无用字符

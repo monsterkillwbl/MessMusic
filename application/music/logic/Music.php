@@ -19,12 +19,15 @@ class Music extends Model{
         if($action=='14'){return 'getNECSongPics';}//获取网易云音乐封面图
         if($action=='15'){return 'getNECSongResURL';}//获取网易云音乐资源链接
         if($action=='16'){return 'getNECSongSearch';}//搜索网易云音乐
+        if($action=='17'){return 'getHotSongList';}//搜索网易云音乐
+
         
         if($action=='21'){return 'getKgSongList';}//获取酷狗音乐歌单信息列表
         if($action=='22'){return 'getKgSongLyric';}//获酷狗易音乐歌词
         if($action=='23'){return 'getKgSongPic';}//获酷狗易音乐图片
         if($action=='24'){return 'getKgSongResURL';}//获取酷狗音乐资源链接
         if($action=='25'){return 'getKgSongSearch';}//搜索酷狗音乐
+        if($action=='26'){return 'getKgHotSong';}//酷狗音乐热门排行榜
 
         if($action=='31'){return 'getQSongList';}//获取QQ音乐歌单信息列表
         if($action=='32'){return 'getQSongLyric';}//获取QQ音乐歌词
