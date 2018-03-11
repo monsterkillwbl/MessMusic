@@ -14,15 +14,14 @@ class Search extends Model {
     	$NECmusic = $music->getNECSongSearch($post['Body']['key']);
     	$Kgmusic = $music->getKgSongSearch($post['Body']['key']);
     	//判断是否存在
-    	$body = [];
     	if(isset($Qmusic)||$Qmusic!=null){
-    		$body = array_merge($body,$Qmusic);
+    		$body['qq'] = $Qmusic;
     	}
     	if(isset($NECmusic)||$NECmusic!=null){
-    		$body = array_merge($body,$NECmusic);
+    		$body['NEC'] = $NECmusic;
     	}
     	if(isset($Kgmusic)||$Kgmusic!=null){
-    		$body = array_merge($body,$Kgmusic);
+    		$body['kg'] = $Kgmusic;
     	}
     	if($body==null){
     		$body = '暂无数据';
