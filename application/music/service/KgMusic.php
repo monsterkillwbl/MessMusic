@@ -17,7 +17,6 @@ class KgMusic extends Model {
         $musicInfo = str_replace('<!--KG_TAG_RES_START-->', '', $musicInfo);
         $musicInfo = str_replace('<!--KG_TAG_RES_END-->', '', $musicInfo);
         // 格式化json
-        $musicInfo = str_replace('\\', '', $musicInfo);
         $musicInfo = json_decode($musicInfo,1);
         // 判断是否存在
         if (!isset($musicInfo['data']['info'])||count($musicInfo['data']['info'])<=0) {

@@ -6,11 +6,8 @@ class Search extends Model{
 	//获取QQ音乐搜索结果
     public function getQSongSearch($word){
         $music =  model('music/Qmusic','model');
-        $url = 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp?ct=24&qqmusic_ver=1298&new_json=1&remoteplace=txt.yqq.center&searchid=49376627710948669&t=0&aggr=1&cr=1&catZhida=1&lossless=0&flag_qc=0&p=1&n=50&w='.$word.'&g_tk=5381&jsonpCallback=MusicJsonCallback4603211876683677&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp?ct=24&qqmusic_ver=1298&new_json=1&remoteplace=txt.yqq.center&searchid=49376627710948669&t=0&aggr=1&cr=1&catZhida=1&lossless=0&flag_qc=0&p=1&n=50&w='.$word.'&g_tk=5381&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $musicInfo = $music->curl_get($url);
-        //去除无用字符
-        $musicInfo = str_replace('MusicJsonCallback4603211876683677(', '', $musicInfo);
-        $musicInfo = str_replace(')', '', $musicInfo);
         //格式化
         $musicInfo = json_decode($musicInfo,1);
         //判断是否存在 否则返回null

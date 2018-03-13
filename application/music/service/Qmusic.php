@@ -12,25 +12,24 @@ class Qmusic extends Model {
             return ['ResultCode'=>1,'ErrCode'=>'3001','ErrMsg'=>'QQ SongListId not exists'];
         }
         $music =  model('music/Qmusic','model');
-        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&new_format=1&pic=500&disstid='.$post['Body']['SongListId'].'&type=1&json=1&utf8=1&onlysong=0&picmid=1&nosign=1&song_begin=0&_=1516976108112';
+        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=0&utf8=1&onlysong=0&disstid='.$post['Body']['SongListId'].'&format=json&g_tk=1386827454&loginUin=31639971&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $musicInfo = $music->curl_get($url);
-        $musicInfo = str_replace('\\', '', $musicInfo);
         $musicInfo = json_decode($musicInfo,1);
         if(!isset($musicInfo['cdlist'][0]['songlist'])||sizeof($musicInfo['cdlist'][0]['songlist'])<=0){
             return ['ResultCode'=>1,'ErrCode'=>'3001','ErrMsg'=>'QQ SongListId not exists'];
         }
         foreach ($musicInfo['cdlist'][0]['songlist'] as $key => $value) {
             // 歌名 歌手
-            $body[$key]['mid'] = $value['mid'];
-            $body[$key]['id'] = $value['id'];
-            $body[$key]['title'] = $value['title'];
+            $body[$key]['mid'] = $value['albummid'];
+            $body[$key]['id'] = $value['albumid'];
+            $body[$key]['title'] = $value['songname'];
             $body[$key]['author'] = $value['singer'][0]['name'];
             //歌曲URL
-            $body[$key]['url'] = $music->getQSongResURL($value['mid']);
+            $body[$key]['url'] = $music->getQSongResURL($value['albummid']);
             //歌曲PIC
-            $body[$key]['pic'] = $music->getQSongPic($value['mid']);
+            $body[$key]['pic'] = $music->getQSongPic($value['albummid']);
             //歌曲LRC
-            $body[$key]['lrc'] = $music->getQSongLrc($value['mid']);
+            $body[$key]['lrc'] = $music->getQSongLrc($value['albummid']);
             //时间
             $body[$key]['time'] = $value['interval'];
         }
@@ -70,17 +69,16 @@ class Qmusic extends Model {
             return ['ResultCode'=>1,'ErrCode'=>'3001','ErrMsg'=>'QQ SongListId not exists'];
         }
         $music =  model('music/Qmusic','model');
-        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&new_format=1&pic=500&disstid='.$post['Body']['SongListId'].'&type=1&json=1&utf8=1&onlysong=0&picmid=1&nosign=1&song_begin=0&_=1516976108112';
+        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=0&utf8=1&onlysong=0&disstid='.$post['Body']['SongListId'].'&format=json&g_tk=1386827454&loginUin=31639971&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $musicInfo = $music->curl_get($url);
-        $musicInfo = str_replace('\\', '', $musicInfo);
         $musicInfo = json_decode($musicInfo,1);
         if(!isset($musicInfo['cdlist'][0]['songlist'])||sizeof($musicInfo['cdlist'][0]['songlist'])<=0){
             return ['ResultCode'=>1,'ErrCode'=>'3003','ErrMsg'=>'QQ SongList not exists'];
         }
         foreach ($musicInfo['cdlist'][0]['songlist'] as $key => $value) {
             // 歌名 歌手
-            $mid = $value['mid'];
-            $body[$key]['title'] = $value['title'];
+            $mid = $value['albummid'];
+            $body[$key]['title'] = $value['songname'];
             $body[$key]['author'] = $value['singer'][0]['name'];
             //歌曲URL
             $body[$key]['url'] = $music->getQSongResURL($mid);
@@ -98,13 +96,8 @@ class Qmusic extends Model {
             return ['ResultCode'=>1,'ErrCode'=>'3004','ErrMsg'=>'Search Key not exists'];
         }
         $music =  model('music/Qmusic','model');
-        $url = 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp?ct=24&qqmusic_ver=1298&new_json=1&remoteplace=txt.yqq.center&searchid=49376627710948669&t=0&aggr=1&cr=1&catZhida=1&lossless=0&flag_qc=0&p=1&n=10&w='.$post['Body']['key'].'&g_tk=5381&jsonpCallback=MusicJsonCallback4603211876683677&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp?ct=24&qqmusic_ver=1298&new_json=1&remoteplace=txt.yqq.center&searchid=49376627710948669&t=0&aggr=1&cr=1&catZhida=1&lossless=0&flag_qc=0&p=1&n=100&w='.$post['Body']['key'].'&g_tk=5381&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $musicInfo = $music->curl_get($url);
-        //去除无用字符
-        $musicInfo = str_replace('MusicJsonCallback4603211876683677(', '', $musicInfo);
-        //去除最后一个括号
-        $musicInfo = rtrim($musicInfo, ')'); 
-        //格式化
         $musicInfo = json_decode($musicInfo,1);
         //判断是否存在 否则返回null
         if(!isset($musicInfo['data']['song']['list'])||sizeof($musicInfo['data']['song']['list'])<=0){
@@ -127,13 +120,9 @@ class Qmusic extends Model {
     }
     //QQ热歌榜
     public function getQHotSongList(){
-        $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?tpl=3&page=detail&topid=26&type=top&song_begin=0&song_num=200&g_tk=5381&jsonpCallback=MusicJsonCallbacktoplist&loginUin=0&hostUin='.rand(100000,99999999).'&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?tpl=3&page=detail&topid=26&type=top&song_begin=0&song_num=200&g_tk=5381&loginUin=0&hostUin='.rand(100000,99999999).'&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $music =  model('music/Qmusic','model');
-        $musicInfo = $music->curl_get($url);
-        //去除无用字符
-        $musicInfo = str_replace('MusicJsonCallbacktoplist(', '', $musicInfo);
-        //去除最后一个括号
-        $musicInfo = rtrim($musicInfo, ')'); 
+        $musicInfo = $music->curl_get($url); 
         //格式化
         $musicInfo = json_decode($musicInfo,1);
         //判断是否存在 否则返回null
