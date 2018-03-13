@@ -15,7 +15,6 @@ class Music extends Model {
         $url = "https://music.163.com/api/playlist/detail?id=".$post['Body']['SongListId'];
         $musicInfo = $music->curl_get($url);
         // 格式化json
-        $musicInfo = str_replace('\\', '', $musicInfo);
         $musicInfo = json_decode($musicInfo,1);
         // 判断是否存在
         if (!isset($musicInfo['result']['tracks'])) {
@@ -77,7 +76,6 @@ class Music extends Model {
         $url = "https://music.163.com/api/playlist/detail?id=".$post['Body']['SongListId'];
         $musicInfo = $music->curl_get($url);
         // 格式化json
-        $musicInfo = str_replace('\\', '', $musicInfo);
         $musicInfo = json_decode($musicInfo,1);
         // 判断是否存在
         if (!isset($musicInfo['result']['tracks'])) {
@@ -213,7 +211,6 @@ class Music extends Model {
         $url = "https://music.163.com/api/playlist/detail?id=3778678";
         $musicInfo = $music->curl_get($url);
         // 格式化json
-        $musicInfo = str_replace('\\', '', $musicInfo);
         $musicInfo = json_decode($musicInfo,1);
         // 判断是否存在
         if (!isset($musicInfo['result']['tracks'])) {
