@@ -9,6 +9,7 @@ class Music extends Model{
         if($controller=='02'){return 'KgMusic';}//控制器
         if($controller=='03'){return 'Qmusic';}//控制器
         if($controller=='04'){return 'Search';}//控制器
+        if($controller=='05'){return 'Discover';}//控制器
         return false;
     } 
     //解析操作方法
@@ -38,6 +39,9 @@ class Music extends Model{
         if($action=='37'){return 'getQHotSongList';}//获取QQ音乐热歌榜
 
         if($action=='41'){return 'getAllSongSearch';}//搜索三个平台音乐
+
+        if($action=='51'){return 'getMusicDiscover';}//获取网易云精品歌单
+        if($action=='52'){return 'getKgDiscover';}//获取酷狗精品歌单
 
         return false;
     }

@@ -10,11 +10,13 @@ class KgMusic extends Model{
 			'CLIENT-IP: '.getIp(),
 			'X-FORWARDED-FOR: '.getIp()
 		);
+
 	    $ch = curl_init();
 	    curl_setopt($ch, CURLOPT_URL, $url);
 	    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	    curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+	    curl_setopt($ch,CURLOPT_ENCODING,'gzip');
 	    curl_setopt($ch, CURLOPT_REFERER, $refer);
 	    $output = curl_exec($ch);
 	    curl_close($ch);

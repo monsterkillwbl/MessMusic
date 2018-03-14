@@ -1,0 +1,4030 @@
+---------------------------------------------------------------
+[ 2018-03-14T13:59:22+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.196339s][吞吐率：5.09req/s] [内存消耗：1,152.09kb] [文件加载：36]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:00:32+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.128731s][吞吐率：7.77req/s] [内存消耗：1,916.01kb] [文件加载：45]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:01:18+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.449254s][吞吐率：2.23req/s] [内存消耗：2,090.76kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011596s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008883s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000682s ]
+[ sql ] [ SQL ] INSERT INTO `api_user` (`OpenId` , `secret` , `nums` , `create_time` , `update_time`) VALUES ('123456789' , '25f9e794323b453885f5181f1b624d0b' , 1 , 1521007278 , 1521007278) [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009109s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000619s ]
+[ sql ] [ SQL ] INSERT INTO `api_api` (`uid` , `TransCode` , `nums` , `create_time` , `update_time`) VALUES (1 , '020551' , 1 , 1521007278 , 1521007278) [ RunTime:0.000962s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:01:43+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.431996s][吞吐率：2.31req/s] [内存消耗：2,085.27kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001891s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007472s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000666s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007794s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000617s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000527s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:02:09+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.016882s][吞吐率：59.23req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:02:12+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.407881s][吞吐率：2.45req/s] [内存消耗：2,085.41kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011215s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007614s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000566s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007554s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000643s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000691s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:02:40+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.017274s][吞吐率：57.89req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:02:41+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.411869s][吞吐率：2.43req/s] [内存消耗：2,085.27kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011586s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007721s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000587s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007485s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000670s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000649s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:03:08+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.413884s][吞吐率：2.42req/s] [内存消耗：2,085.46kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011256s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007824s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000693s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007765s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000593s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000530s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:06:28+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.398322s][吞吐率：2.51req/s] [内存消耗：2,085.74kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001760s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007751s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000662s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008463s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000690s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:07:04+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.374952s][吞吐率：2.67req/s] [内存消耗：2,085.52kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001999s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007317s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000588s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007459s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000603s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000559s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:07:26+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.446229s][吞吐率：2.24req/s] [内存消耗：2,085.53kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001967s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008817s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000859s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007745s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000809s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000677s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:07:44+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.017995s][吞吐率：55.57req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:07:45+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.399693s][吞吐率：2.50req/s] [内存消耗：2,085.52kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002018s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.010022s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000696s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000724s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007849s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000736s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000629s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:12:46+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.022466s][吞吐率：44.51req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:12:48+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.418618s][吞吐率：2.39req/s] [内存消耗：2,085.59kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001889s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007994s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000770s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007587s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000566s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000524s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:13:36+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.377305s][吞吐率：2.65req/s] [内存消耗：2,085.80kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002404s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007434s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000604s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008123s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000651s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000585s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:14:53+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.408732s][吞吐率：2.45req/s] [内存消耗：2,085.80kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012328s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007729s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000698s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007433s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000615s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000468s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:20:53+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.409456s][吞吐率：2.44req/s] [内存消耗：2,085.84kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001998s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007713s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000732s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007289s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000651s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000532s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:21:19+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.018114s][吞吐率：55.21req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:21:29+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.445355s][吞吐率：2.25req/s] [内存消耗：2,085.89kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011107s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007804s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000653s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007613s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000608s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000538s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:21:56+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.419363s][吞吐率：2.38req/s] [内存消耗：2,085.81kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002328s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007687s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000753s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007064s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000637s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000616s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:23:41+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.391945s][吞吐率：2.55req/s] [内存消耗：2,085.76kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011771s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007600s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000660s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007655s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000615s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000567s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:23:56+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.404990s][吞吐率：2.47req/s] [内存消耗：2,085.77kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002033s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007935s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000707s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007196s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000584s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000539s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:24:12+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.435908s][吞吐率：2.29req/s] [内存消耗：2,085.77kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011315s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007547s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000669s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007779s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000666s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000623s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:25:01+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.016275s][吞吐率：61.44req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T14:25:02+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.377743s][吞吐率：2.65req/s] [内存消耗：2,085.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002011s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008047s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000681s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007295s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000582s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000543s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:33:10+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.428508s][吞吐率：2.33req/s] [内存消耗：2,101.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011147s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008198s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000772s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008298s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000707s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000690s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:39:28+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.441242s][吞吐率：2.27req/s] [内存消耗：2,085.76kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002338s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007711s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000547s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007022s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000528s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000504s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:39:42+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.413900s][吞吐率：2.42req/s] [内存消耗：2,101.77kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001951s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008843s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000743s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009904s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000724s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000626s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:40:34+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.410244s][吞吐率：2.44req/s] [内存消耗：2,101.77kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012141s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007740s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000598s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007623s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000652s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000620s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:40:58+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.383951s][吞吐率：2.60req/s] [内存消耗：2,117.80kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001961s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007634s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000546s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.006985s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000514s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000582s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:41:33+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.421244s][吞吐率：2.37req/s] [内存消耗：2,085.76kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002047s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007767s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000620s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007040s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000551s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000521s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:41:54+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.375608s][吞吐率：2.66req/s] [内存消耗：2,117.80kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001985s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007701s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000617s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007467s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000605s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000529s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:44:55+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.372469s][吞吐率：2.68req/s] [内存消耗：2,086.27kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002226s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009520s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000641s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008111s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000735s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000731s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:45:57+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.409975s][吞吐率：2.44req/s] [内存消耗：2,142.63kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010993s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007758s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000605s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007837s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000704s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000604s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:46:16+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.410342s][吞吐率：2.44req/s] [内存消耗：2,086.73kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012131s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.011951s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000753s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009857s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000734s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000697s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:46:57+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.529764s][吞吐率：1.89req/s] [内存消耗：2,086.77kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020551',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002034s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007793s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000540s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007651s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000568s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020551' [ RunTime:0.000670s ]
+---------------------------------------------------------------
+[ 2018-03-14T14:59:24+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.200128s][吞吐率：5.00req/s] [内存消耗：2,120.88kb] [文件加载：51]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002383s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007677s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000601s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008736s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000672s ]
+[ sql ] [ SQL ] INSERT INTO `api_api` (`uid` , `TransCode` , `nums` , `create_time` , `update_time`) VALUES (1 , '020552' , 1 , 1521010763 , 1521010763) [ RunTime:0.000624s ]
+[ error ] [8]未定义变量: body[E:\DongApi\application\music\service\Discover.php:46]
+---------------------------------------------------------------
+[ 2018-03-14T15:00:31+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.088961s][吞吐率：11.24req/s] [内存消耗：2,117.02kb] [文件加载：51]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001925s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007898s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000734s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007180s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000644s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000555s ]
+[ error ] [8]未定义变量: body[E:\DongApi\application\music\service\Discover.php:48]
+---------------------------------------------------------------
+[ 2018-03-14T15:02:03+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.179819s][吞吐率：5.56req/s] [内存消耗：2,117.03kb] [文件加载：51]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002048s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008367s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000689s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007697s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000575s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000537s ]
+[ error ] [8]未定义变量: body[E:\DongApi\application\music\service\Discover.php:48]
+---------------------------------------------------------------
+[ 2018-03-14T15:02:26+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.177512s][吞吐率：5.63req/s] [内存消耗：2,117.06kb] [文件加载：51]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001900s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007870s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000646s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007247s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000590s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000508s ]
+[ error ] [8]未定义变量: body[E:\DongApi\application\music\service\Discover.php:47]
+---------------------------------------------------------------
+[ 2018-03-14T15:08:22+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.272410s][吞吐率：3.67req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002232s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007577s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000623s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007597s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000588s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000633s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:09:07+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.176712s][吞吐率：5.66req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002011s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007807s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000691s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007190s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000673s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000490s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:11:25+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.151772s][吞吐率：6.59req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002147s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007735s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000583s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007411s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000876s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000703s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:11:53+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.094177s][吞吐率：10.62req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012322s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008144s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000638s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007565s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000680s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000652s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:12:13+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.100007s][吞吐率：10.00req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011486s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008139s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000637s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008414s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000684s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000625s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:12:49+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.095787s][吞吐率：10.44req/s] [内存消耗：2,087.39kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012314s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007925s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000703s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007844s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000587s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:14:11+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.106984s][吞吐率：9.35req/s] [内存消耗：2,087.39kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002248s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009124s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000572s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007826s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000606s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000517s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:14:12+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.110637s][吞吐率：9.04req/s] [内存消耗：2,087.39kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011817s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007870s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000544s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008678s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000662s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000538s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:15:03+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.193757s][吞吐率：5.16req/s] [内存消耗：2,087.41kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002033s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007650s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000699s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007277s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000701s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:15:30+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.093707s][吞吐率：10.67req/s] [内存消耗：2,087.39kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011789s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008020s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000660s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007352s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000576s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000534s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:17:38+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.160569s][吞吐率：6.23req/s] [内存消耗：2,111.22kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002216s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007720s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000712s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007334s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000616s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000584s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:21:26+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.173129s][吞吐率：5.78req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011411s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008648s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000675s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007153s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000636s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000646s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:22:51+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.123676s][吞吐率：8.09req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011185s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008378s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000648s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007357s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000667s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000592s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:22:53+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.094453s][吞吐率：10.59req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011518s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008043s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000761s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007461s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000607s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000563s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:23:14+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.094707s][吞吐率：10.56req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002096s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007779s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000733s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007550s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000584s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000530s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:23:19+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.102996s][吞吐率：9.71req/s] [内存消耗：2,087.18kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011637s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007685s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000663s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007272s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000799s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000832s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:25:24+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.224225s][吞吐率：4.46req/s] [内存消耗：2,087.84kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011909s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007438s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000587s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007513s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000727s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000573s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:25:43+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.497336s][吞吐率：2.01req/s] [内存消耗：2,152.03kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002131s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007669s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000689s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000580s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007569s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000564s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000519s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:26:08+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.146551s][吞吐率：6.82req/s] [内存消耗：2,151.82kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002043s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007831s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000756s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007899s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000607s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000648s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:26:41+08:00 ] 127.0.0.1 GET /index.php/api/demo/index
+[ info ] 127.0.0.1:82/index.php/api/demo/index [运行时间：0.017754s][吞吐率：56.33req/s] [内存消耗：1,034.77kb] [文件加载：34]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'demo',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Demo->index[ E:\DongApi\application\api\controller\Demo.php ]
+[ info ] [ VIEW ] E:\DongApi\public/../application/api\view\demo\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-14T15:26:43+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.184374s][吞吐率：5.42req/s] [内存消耗：2,151.82kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002020s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007858s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000607s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007559s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000673s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000594s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:28:22+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.162847s][吞吐率：6.14req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002221s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008039s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000783s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008462s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000628s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000607s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:28:35+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.089907s][吞吐率：11.12req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002092s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007416s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000717s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007399s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000622s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000521s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:28:50+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.106944s][吞吐率：9.35req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011578s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007948s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000620s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007359s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000647s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000569s ]
+---------------------------------------------------------------
+[ 2018-03-14T15:29:58+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.084672s][吞吐率：11.81req/s] [内存消耗：2,087.81kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002246s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007907s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000697s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007378s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000560s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000531s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:32:42+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.183558s][吞吐率：5.45req/s] [内存消耗：2,087.81kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012064s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008535s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000591s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008348s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000651s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000579s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:34:36+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.095753s][吞吐率：10.44req/s] [内存消耗：2,087.93kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003224s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009363s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000969s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000725s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010677s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001053s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000622s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:36:10+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.346247s][吞吐率：2.89req/s] [内存消耗：2,319.80kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011590s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.011003s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000779s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009487s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001043s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000787s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:37:08+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.106822s][吞吐率：9.36req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011429s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009744s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000711s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010144s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000853s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001200s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:37:39+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.103121s][吞吐率：9.70req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003510s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009769s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000869s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010576s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000912s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001055s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:38:30+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.179610s][吞吐率：5.57req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011310s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007670s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000578s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007451s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000569s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:39:06+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.062790s][吞吐率：15.93req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002203s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.010087s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000899s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010427s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001012s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000815s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:39:20+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.102792s][吞吐率：9.73req/s] [内存消耗：2,087.79kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003621s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.011187s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000577s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008745s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000681s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000608s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:39:36+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.094626s][吞吐率：10.57req/s] [内存消耗：2,087.43kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002948s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008936s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.001128s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009339s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001053s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001147s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:45:58+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.169854s][吞吐率：5.89req/s] [内存消耗：2,087.43kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003826s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009645s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000697s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009293s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000641s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000582s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:46:52+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.095815s][吞吐率：10.44req/s] [内存消耗：2,087.84kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002846s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.010172s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000953s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000711s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010689s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000721s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000658s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:49:35+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.163019s][吞吐率：6.13req/s] [内存消耗：2,088.09kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002718s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009517s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000585s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007563s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000750s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000565s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:49:42+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.093850s][吞吐率：10.66req/s] [内存消耗：2,088.09kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002233s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008371s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000721s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007466s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000696s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000652s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:50:02+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.106742s][吞吐率：9.37req/s] [内存消耗：2,152.52kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011496s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008862s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000709s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008517s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001137s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000896s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:50:39+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.117837s][吞吐率：8.49req/s] [内存消耗：2,152.20kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012141s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007466s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000493s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010888s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001914s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000940s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:51:19+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.102667s][吞吐率：9.74req/s] [内存消耗：2,088.24kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002223s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008113s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000630s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000620s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007431s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000581s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000574s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:53:03+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.180532s][吞吐率：5.54req/s] [内存消耗：2,088.24kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003248s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009392s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000655s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.011404s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001240s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001874s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:54:24+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.111332s][吞吐率：8.98req/s] [内存消耗：2,116.26kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002838s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009399s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.001133s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000753s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.010226s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001366s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000715s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:55:46+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.161182s][吞吐率：6.20req/s] [内存消耗：2,088.24kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002289s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009777s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000797s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009728s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000778s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000865s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:55:55+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.097543s][吞吐率：10.25req/s] [内存消耗：2,088.23kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002692s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.009568s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.001054s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.001023s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.009273s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001208s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000653s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:56:02+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.098739s][吞吐率：10.13req/s] [内存消耗：2,116.26kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002933s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007714s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000642s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.008038s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000796s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000623s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:56:54+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.109976s][吞吐率：9.09req/s] [内存消耗：2,088.27kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002625s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008417s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000598s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007750s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000772s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000835s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:57:24+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.089913s][吞吐率：11.12req/s] [内存消耗：2,104.23kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002199s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.007665s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000605s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007765s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000697s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000663s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:57:46+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.171689s][吞吐率：5.82req/s] [内存消耗：2,088.25kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002235s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.008822s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.000675s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.007971s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000668s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000605s ]
+---------------------------------------------------------------
+[ 2018-03-14T17:58:51+08:00 ] 127.0.0.1 POST /index.php/api/index/index
+[ info ] 127.0.0.1:82/index.php/api/index/index [运行时间：0.130866s][吞吐率：7.64req/s] [内存消耗：2,088.02kb] [文件加载：48]
+[ info ] [ LANG ] E:\DongApi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'Hm_lvt_3fdc733ff181b34ba3fbbdf650f68f3c=1519892463,1519970299',
+  'content-length' => '64',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://127.0.0.1:82/index.php/api/demo/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh,zh-CN;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => '127.0.0.1:82',
+)
+[ info ] [ PARAM ] array (
+  'TransCode' => '020552',
+  'OpenId' => '123456789',
+  'Body' => 
+  array (
+    'SongListId' => '141998290',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\DongApi\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003399s ] mysql:host=127.0.0.1;port=3306;dbname=api;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_user` [ RunTime:0.012067s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' [ RunTime:0.001618s ]
+[ sql ] [ SQL ] UPDATE `api_user`  SET `nums`=`nums`+1  WHERE  `OpenId` = '123456789' [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT * FROM `api_user` WHERE  `OpenId` = '123456789' LIMIT 1 [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `api_api` [ RunTime:0.011892s ]
+[ sql ] [ SQL ] SELECT * FROM `api_api` WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.001067s ]
+[ sql ] [ SQL ] UPDATE `api_api`  SET `nums`=`nums`+1  WHERE  `uid` = 1  AND `TransCode` = '020552' [ RunTime:0.000843s ]
