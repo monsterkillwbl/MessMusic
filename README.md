@@ -48,28 +48,8 @@ API
             "pic": "https://api.hibai.cn/music/index/music?id=517009807&type=pic",
             "url": "https://api.hibai.cn/music/index/music?id=517009807&type=url",
             "lrc": "https://api.hibai.cn/music/index/music?id=517009807&type=lrc"
-        },
-        {
-            "title": "あっちゅ～ま青春!",
-            "author": "七森中☆ごらく部",
-            "pic": "https://api.hibai.cn/music/index/music?id=36271441&type=pic",
-            "url": "https://api.hibai.cn/music/index/music?id=36271441&type=url",
-            "lrc": "https://api.hibai.cn/music/index/music?id=36271441&type=lrc"
-        },
-        {
-            "title": "brave heart",
-            "author": "宮崎歩",
-            "pic": "https://api.hibai.cn/music/index/music?id=29816860&type=pic",
-            "url": "https://api.hibai.cn/music/index/music?id=29816860&type=url",
-            "lrc": "https://api.hibai.cn/music/index/music?id=29816860&type=lrc"
-        },
-        {
-            "title": "东京不太热",
-            "author": "封茗囧菌",
-            "pic": "https://api.hibai.cn/music/index/music?id=34723470&type=pic",
-            "url": "https://api.hibai.cn/music/index/music?id=34723470&type=url",
-            "lrc": "https://api.hibai.cn/music/index/music?id=34723470&type=lrc"
         }
+        ......
     ]
 }
 ```
@@ -126,13 +106,15 @@ API
 
 1. 020441 搜索QQ酷狗网易云音乐(key必填)
 
+1. 020551 获取网易云精选歌单
+1. 020552 获取酷狗音乐精选歌单
+1. 020553 获取QQ音乐精选歌单
+
 1. 030111 获取ONE(一个)当天的一篇文字
 1. 030112 获取ONE(一个)最近一周的一篇文字
 
 
 ### 4. 错误码
-
-ResultCode=>0
 
 1. ErrCode:0000 => OpenID不存在
 1. ErrCode:9999 => type或id不存在
