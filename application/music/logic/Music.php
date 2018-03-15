@@ -42,6 +42,7 @@ class Music extends Model{
 
         if($action=='51'){return 'getMusicDiscover';}//获取网易云精品歌单
         if($action=='52'){return 'getKgDiscover';}//获取酷狗精品歌单
+        if($action=='53'){return 'getQDiscover';}//获取酷狗精品歌单
 
         return false;
     }

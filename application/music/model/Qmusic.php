@@ -4,9 +4,8 @@ use think\Model;
 
 class Qmusic extends Model{
 	public function curl_get($url){
-	    $refer = "https://y.qq.com/";
+	    $refer = "http://y.qq.com/";
 	    $header = array(
-	    	'Cookie: ' . 'appver=1.5.0.75771;',
 			'CLIENT-IP: '.getIp(),
 			'X-FORWARDED-FOR: '.getIp()
 		);

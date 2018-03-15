@@ -42,4 +42,21 @@ class Discover extends Model {
         }
         return ['ResultCode'=>1,'ErrCode'=>'OK','Body'=>$body];
     }
+    
+    //QQ音乐热门歌单
+    public function getQDiscover(){
+        $music =  model('music/Qmusic','model');
+        $url = 'http://c.y.qq.com/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg?picmid=1&g_tk=1386827454&loginUin='.rand(100000,999999999).'&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0&categoryId=10000000&sortId=5&sin=0&ein=29';
+        $discover = $music->curl_get($url);
+        $discover = json_decode($discover,1);
+        //转换歌单内容
+        $list = $discover['data']['list'];
+        //组合内容
+        foreach ( $list as $key => $value) {
+            $body[$key]['discover_id'] = $list[$key]['dissid'];
+            $body[$key]['discover_title'] = $list[$key]['dissname'];
+            $body[$key]['discover_pic'] = $list[$key]['imgurl'];
+        }
+        return ['ResultCode'=>1,'ErrCode'=>'OK','Body'=>$body];
+    }
 }
