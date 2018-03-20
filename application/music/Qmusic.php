@@ -46,17 +46,16 @@ class Qmusic extends Controller{
 	    }
         //获取QQ音乐资源
         if($get['type']=='url'){
-            //生成guid
-            $guid = rand(100000000,999999999);
             // 请求地址
-            $url = 'http://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?format=json&platform=yqq&cid=205361747&songmid='.$id.'&filename=C400'.$id.'.m4a&guid='.$guid;
+            $url = 'http://c.y.qq.com/v8/fcg-bin/fcg_play_single_song.fcg?songmid='.$id.'&format=json&platform=yqq';
             $SongInfo = $music->curl_get($url);
             //格式化
             $SongInfo = json_decode($SongInfo,1);
-            $filename = $SongInfo['data']['items'][0]['filename'];
-            $vkey = $SongInfo['data']['items'][0]['vkey'];
+            // 获取id
+            $songId = $SongInfo['data'][0]['id'];
+            $songUrl = $SongInfo['url'][$songId];
             // 返回url
-            $this->redirect('http://dl.stream.qqmusic.qq.com/'.$filename.'?vkey='.$vkey.'&guid='.$guid.'&fromtag=66');
+            $this->redirect('http://'.$songUrl);
         }
         // 获取QQ音乐图片
         if($get['type']=='pic'){
