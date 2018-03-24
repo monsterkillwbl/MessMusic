@@ -7,3 +7,5 @@ DongAPI
 * [使用文档](https://github.com/mrdong916/DongApi/wiki)
 * [示例网站](https://www.7cwa.com/)
 * [接口测试](https://api.hibai.cn/api/demo/index)
+
+>如有问题请加入QQ群咨询：[579621905](https://jq.qq.com/?_wv=1027&k=5ESOXhw)
