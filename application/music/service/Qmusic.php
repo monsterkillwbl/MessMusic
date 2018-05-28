@@ -12,7 +12,7 @@ class Qmusic extends Model {
             return ['ResultCode'=>1,'ErrCode'=>'3001','ErrMsg'=>'QQ SongListId not exists'];
         }
         $music =  model('music/Qmusic','model');
-        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=0&utf8=1&onlysong=0&disstid='.$post['Body']['SongListId'].'&format=json&g_tk=1386827454&loginUin=31639971&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=1&utf8=1&onlysong=0&disstid='.$post['Body']['SongListId'].'&format=json&g_tk=5381&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $musicInfo = $music->curl_get($url);
         $musicInfo = json_decode($musicInfo,1);
         if(!isset($musicInfo['cdlist'][0]['songlist'])||sizeof($musicInfo['cdlist'][0]['songlist'])<=0){
@@ -20,16 +20,16 @@ class Qmusic extends Model {
         }
         foreach ($musicInfo['cdlist'][0]['songlist'] as $key => $value) {
             // 歌名 歌手
-            $body[$key]['mid'] = $value['albummid'];
+            $body[$key]['mid'] = $value['songmid'];
             $body[$key]['id'] = $value['albumid'];
             $body[$key]['title'] = $value['songname'];
             $body[$key]['author'] = $value['singer'][0]['name'];
             //歌曲URL
-            $body[$key]['url'] = $music->getQSongResURL($value['albummid']);
+            $body[$key]['url'] = $music->getQSongResURL($value['songmid']);
             //歌曲PIC
-            $body[$key]['pic'] = $music->getQSongPic($value['albummid']);
+            $body[$key]['pic'] = $music->getQSongPic($value['songmid']);
             //歌曲LRC
-            $body[$key]['lrc'] = $music->getQSongLrc($value['albummid']);
+            $body[$key]['lrc'] = $music->getQSongLrc($value['songmid']);
             //时间
             $body[$key]['time'] = $value['interval'];
         }
@@ -69,7 +69,7 @@ class Qmusic extends Model {
             return ['ResultCode'=>1,'ErrCode'=>'3001','ErrMsg'=>'QQ SongListId not exists'];
         }
         $music =  model('music/Qmusic','model');
-        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=0&utf8=1&onlysong=0&disstid='.$post['Body']['SongListId'].'&format=json&g_tk=1386827454&loginUin=31639971&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=0&utf8=1&onlysong=0&disstid='.$post['Body']['SongListId'].'&format=json&g_tk=1386827454&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $musicInfo = $music->curl_get($url);
         $musicInfo = json_decode($musicInfo,1);
         if(!isset($musicInfo['cdlist'][0]['songlist'])||sizeof($musicInfo['cdlist'][0]['songlist'])<=0){
@@ -77,7 +77,7 @@ class Qmusic extends Model {
         }
         foreach ($musicInfo['cdlist'][0]['songlist'] as $key => $value) {
             // 歌名 歌手
-            $mid = $value['albummid'];
+            $mid = $value['songmid'];
             $body[$key]['title'] = $value['songname'];
             $body[$key]['author'] = $value['singer'][0]['name'];
             //歌曲URL
@@ -120,7 +120,7 @@ class Qmusic extends Model {
     }
     //QQ热歌榜
     public function getQHotSongList(){
-        $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?tpl=3&page=detail&topid=26&type=top&song_begin=0&song_num=200&g_tk=5381&loginUin=0&hostUin='.rand(100000,99999999).'&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+        $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?tpl=3&page=detail&topid=26&type=top&song_begin=0&song_num=200&g_tk=5381&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
         $music =  model('music/Qmusic','model');
         $musicInfo = $music->curl_get($url); 
         //格式化

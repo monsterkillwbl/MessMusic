@@ -18,20 +18,15 @@ class Qmusic extends Controller{
         $music = model('music/Qmusic','model');
         if($get['type']=='lrc'){
             // 请求地址
-            $url = 'http://c.y.qq.com/qzone/fcg-bin/fcg_mv_getinfo_bysongid.fcg?utf8=1&mids='.$id.'&uin=10000&p=0.2942163181853784&g_tk=1827372749&jsonpCallback=JsonCallback&loginUin='.rand(10000000,999999999).'&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+            $url = 'https://c.y.qq.com/v8/fcg-bin/fcg_play_single_song.fcg?songmid='.$get['id'].'&tpl=yqq_song_detail&format=json&g_tk=5381&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
             $SongInfo = $music->curl_get($url);
-            // 去除多余信息
-            $SongInfo = str_replace('JsonCallback(', '', $SongInfo);
-            $SongInfo = str_replace(')', '', $SongInfo);
-            // 格式化
-            $SongInfo = str_replace('\\', '', $SongInfo);
             $SongInfo = json_decode($SongInfo,1);
             // 获取id
-            $songId = $SongInfo['mvlist'][0]['songid'];
-            $url = 'http://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?nobase64=1&musicid='.$songId.'&callback=jsonp1&g_tk=5381&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0';
+            $songId = $SongInfo['data'][0]['id'];
+            $url = 'http://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?format=jsonp&g_tk=5381&loginUin=0&hostUin=0&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0&nobase64=1&musicid='.$songId;
             $lyricInfo = $music->curl_get($url);
             // 去除多余信息
-            $lyricInfo = str_replace('jsonp1(', '', $lyricInfo);
+            $lyricInfo = str_replace('MusicJsonCallback(', '', $lyricInfo);
             $lyricInfo = str_replace(')', '', $lyricInfo);
             // 格式化
             $lyricInfo = json_decode($lyricInfo,1);
