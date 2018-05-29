@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>MUSIC</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/layui.mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/APlayer.min.css">
+    <link rel="stylesheet" href="css/style.css"></link>
+    <script src="js/layui.all.js" type="text/javascript"></script>
+    <script src="js/Jquery.min.js"></script>
+    <script src="js/background-blur.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<!-- 头部 -->
+<div id="header" class="layui-header">
+
+    <div class="layui-container header-content">
+        <div class="logo">
+            <p>What Music</p>
+        </div>
+        <ul class="layui-nav">
+            <li class="layui-nav-item index"><a href="#" onclick="header(0);">首页</a></li>
+            <li class="layui-nav-item top"><a href="#" onclick="header(1);">排行榜</a></li>
+            <li class="layui-nav-item list"><a href="#" onclick="header(2);">歌单</a></li>
+            <li class="layui-nav-item about"><a href="#" onclick="header(3);">关于</a></li>
+        </ul>
+        <div class="search">
+
+            <input class="layui-input " id="search" type="search" placeholder="请输入音乐名称回车搜索">
+        </div>
+    </div>
+</div>
+<div class="layui-container" id="content">
+</div>
+<div class="layui-container" >
+    <div id="page"></div>
+</div>
+<footer id="footer" class="layui-footer">
+    <div class="layui-container">
+        <div id="aplayer"></div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/APlayer.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>        
+        
