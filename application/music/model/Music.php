@@ -11,11 +11,15 @@ class Music extends Model{
 			'X-FORWARDED-FOR: '.getIp()
 		);
 	    $ch = curl_init();
-	    $ip_json = $this->curl_get_ip('api.7swa.com/ip');
-		$ip = json_decode($ip_json,true);
-		if ($ip!=null&&$ip['data'][0]['ip']!=null&&$is_proxy) {
-			curl_setopt($ch, CURLOPT_PROXY, $ip['data'][0]['ip'].':'.$ip['data'][0]['port']); //代理服务器地址
-		}
+	    //判断是否启用代理
+	    if ($is_proxy) {
+	    	//个人私有代理IP
+	    	$ip_json = $this->curl_get_ip('api.7swa.com/ip');
+			$ip = json_decode($ip_json,true);
+			if ($ip!=null&&$ip['data'][0]['ip']!=null) {
+				curl_setopt($ch, CURLOPT_PROXY, $ip['data'][0]['ip'].':'.$ip['data'][0]['port']); //代理服务器地址
+			}
+	    }
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

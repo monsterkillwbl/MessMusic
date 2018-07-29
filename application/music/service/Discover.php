@@ -6,7 +6,7 @@ class Discover extends Model {
 	//搜索所有平台音乐
     public function getMusicDiscover(){
     	$music =  model('music/Music','model');
-    	$url = 'http://music.163.com/discover/playlist/';
+    	$url = 'https://music.163.com/discover/playlist';
         $discover = $music->curl_get($url);
         //去除多余内容
         $discover=preg_replace("/[\t\n\r]+/","",$discover);
