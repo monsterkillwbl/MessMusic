@@ -43,7 +43,7 @@ class Music extends Controller{
     	// 获取图片地址
     	if($get['type']=='pic'){
     		$url = 'http://music.163.com/api/song/detail/?id='.$id.'&ids=['.$id.']';
-			$picInfo = $music->curl_get($url);
+			$picInfo = $music->curl_get($url,true);
 	        $picInfo = str_replace('http', 'https', $picInfo);
 			$picInfo = str_replace('\\', '', $picInfo);
 	        $picInfo = json_decode($picInfo,1);
