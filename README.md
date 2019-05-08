@@ -1,10 +1,10 @@
 DAPI
 ===
 
-### 新版API已经更新，正在完善中，暂未开源
+### 新版API更加完善，支持更多
 
-API地址：http://api.bzqll.com
-文档地址：http://www.bzqll.com
+文档地址：https://mrdong916.github.io/mess-api-doc
+博客地址：http://www.bzqll.com
 
 #### 目前已有API接口
 网易云音乐、酷狗音乐、QQ音乐、ONE(一个)
